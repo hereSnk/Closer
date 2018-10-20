@@ -1,0 +1,123 @@
+﻿@model Closer.Models.BuyerInfo
+
+@{
+    Layout = null;
+
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <link href="~/Style/closer.css" rel="stylesheet" />
+    <title>SignUPBuyer</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal login-box ">
+            <div class="bg-img"></div>
+            <div class="left">
+                <h1>BuyerInfo</h1>
+                <hr />
+                <div class="form-group">
+                    @Html.Label("Email")
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model._Buyer_Email)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Name")
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model._Name)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Password")
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model._Password)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Confirm Your Password")
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model._ConfirmPassword)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Where Do You Stay")
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model._Location)*@
+                        @Html.TextBoxFor(x => x._Location, new { @id = "demo" })
+                    </div>
+                </div>
+ 
+                <div class="form-group">
+                    @Html.Label("Contact")
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model._Phone_no)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input id="btnSubmt" type="submit" value="SignUp" class="btn btn-default" /> 
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    }
+</body>
+</html>
+
+<script type="text/javascript">
+
+    
+    var x = document.getElementById("demo");
+    function getLocation() {
+        
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+            x.innerText = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        
+        x.innerText = position.coords.latitude + " "+ position.coords.longitude;
+        
+    }
+    $("#demo").change(function (e) {
+        getLocation();
+    })
+    @*$("#demo").focusout(function (e) {
+        debugger;
+
+        var d = {};
+        d.url = '@Url.Action("TrackLocation","Base")';
+        d.type = "Post";
+        d.datatype = "json";
+        x = getLocation();
+        d.data = JSON.stringify({ Location: getLocation()});
+        d.contentType = "application/json";
+        d.success = function (response) {
+            Console.log("Successfully Location Tracked");
+        };
+        $.ajax(d);
+    });*@
+
+
+    
+</script>
+
+
+   

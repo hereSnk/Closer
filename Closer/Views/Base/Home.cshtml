@@ -1,0 +1,50 @@
+﻿@model CloserRepository.TBL_BUYER_INFO
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Scripts/myStyle.css" rel="stylesheet" />
+    <title>Closer</title>
+</head>
+<body>
+    @using (Html.BeginForm("Home", "Base", FormMethod.Post))
+    {
+        <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this Buyer form to create an account.</p>
+            <hr>
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Your Full Name" name="name" value="@Model.Name">
+
+            <label for="phoneno"><b>Phone Number</b></label>
+            <input type="text" placeholder="Enter Your Phone Number" name="phoneno" value="@Model.Phone_no">
+
+            <label for="address"><b>Local Address</b></label>
+            <input type="text" placeholder="Enter Your Address" name="address" value="@Model.Location">
+
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" value="@Model.Buyer_Email">
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" value="@Model.Password">
+
+            <label for="psw-repeat"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" value="@Model.Confirm_Password">
+
+            <label for="psw-repeat"><b>Registration Time</b></label>
+            <input type="text" name="psw-repeat" value="@Model.Registration_time">
+
+            <div class="clearfix">
+                <button type="button" onclick="" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+        </div>
+    }
+</body>
+</html>

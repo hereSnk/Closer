@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Closer_DBModelStoreContainer" CdmEntityContainer="Closer_DBEntities">
+    <EntitySetMapping Name="TBL_BUYER_INFO">
+      <EntityTypeMapping TypeName="Closer_DBModel.TBL_BUYER_INFO">
+        <MappingFragment StoreEntitySet="TBL_BUYER_INFO">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Phone_no" ColumnName="Phone_no" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Confirm_Password" ColumnName="Confirm_Password" />
+          <ScalarProperty Name="Registration_time" ColumnName="Registration_time" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Buyer_Email" ColumnName="Buyer_Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_SELLER_INFO">
+      <EntityTypeMapping TypeName="Closer_DBModel.TBL_SELLER_INFO">
+        <MappingFragment StoreEntitySet="TBL_SELLER_INFO">
+          <ScalarProperty Name="S_Id" ColumnName="S_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Confirm_Password" ColumnName="Confirm_Password" />
+          <ScalarProperty Name="Registration_time" ColumnName="Registration_time" />
+          <ScalarProperty Name="Seller_Email" ColumnName="Seller_Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

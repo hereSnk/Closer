@@ -1,0 +1,10 @@
+C:\Users\hereSNK\Documents\Visual Studio 2013\Projects\Closer\CloserRepository\bin\Debug\CloserRepository.dll.config
+C:\Users\hereSNK\Documents\Visual Studio 2013\Projects\Closer\CloserRepository\bin\Debug\CloserRepository.dll
+C:\Users\hereSNK\Documents\Visual Studio 2013\Projects\Closer\CloserRepository\bin\Debug\CloserRepository.pdb
+C:\Users\hereSNK\Documents\Visual Studio 2013\Projects\Closer\CloserRepository\bin\Debug\EntityFramework.dll
+C:\Users\hereSNK\Documents\Visual Studio 2013\Projects\Closer\CloserRepository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hereSNK\Documents\Visual Studio 2013\Projects\Closer\CloserRepository\bin\Debug\EntityFramework.xml
+C:\Users\hereSNK\Documents\Visual Studio 2013\Projects\Closer\CloserRepository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hereSNK\Documents\Visual Studio 2013\Projects\Closer\CloserRepository\obj\Debug\CloserRepository.csprojResolveAssemblyReference.cache
+C:\Users\hereSNK\Documents\Visual Studio 2013\Projects\Closer\CloserRepository\obj\Debug\CloserRepository.dll
+C:\Users\hereSNK\Documents\Visual Studio 2013\Projects\Closer\CloserRepository\obj\Debug\CloserRepository.pdb
