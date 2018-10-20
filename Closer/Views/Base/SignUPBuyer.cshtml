@@ -80,26 +80,36 @@
 
 <script type="text/javascript">
 
-    
-    var x = document.getElementById("demo");
-    function getLocation() {
-        
+    $(document).ready(function () {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
-        } else { 
-            x.innerText = "Geolocation is not supported by this browser.";
+        } else {
+            $("#demo").val("Geolocation is not supported by this browser.");
         }
-    }
+        function showPosition(position) {
+            $("#demo").val(position.coords.latitude + " " + position.coords.longitude);
+        }
+    });
 
-    function showPosition(position) {
-        
-        x.innerText = position.coords.latitude + " "+ position.coords.longitude;
-        
-    }
-    $("#demo").change(function (e) {
-        getLocation();
-    })
-    @*$("#demo").focusout(function (e) {
+    //var x = document.getElementById("demo");
+    //function getLocation() {
+
+    //    if (navigator.geolocation) {
+    //        navigator.geolocation.getCurrentPosition(showPosition);
+    //    } else {
+    //        x.innerText = "Geolocation is not supported by this browser.";
+    //    }
+    //}
+
+    //function showPosition(position) {
+
+    //    x.innerText = position.coords.latitude + " " + position.coords.longitude;
+
+    //}
+    //$("#demo").change(function (e) {
+    //    getLocation();
+    //})
+    @* $("#demo").focusout(function (e) {
         debugger;
 
         var d = {};
@@ -107,13 +117,15 @@
         d.type = "Post";
         d.datatype = "json";
         x = getLocation();
-        d.data = JSON.stringify({ Location: getLocation()});
+        d.data = JSON.stringify({ Location: getLocation() });
         d.contentType = "application/json";
         d.success = function (response) {
             Console.log("Successfully Location Tracked");
         };
         $.ajax(d);
     });*@
+
+
 
 
     
